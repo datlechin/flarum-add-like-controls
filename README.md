@@ -24,4 +24,4 @@ php flarum cache:clear
 
 - [Packagist](https://packagist.org/packages/datlechin/flarum-add-like-controls)
 - [GitHub](https://github.com/datlechin/flarum-add-like-controls)
-- [Discuss](https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE)
+- [Discuss](https://discuss.flarum.org/d/29523)
