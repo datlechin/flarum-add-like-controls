@@ -1,0 +1,53 @@
+{
+    "name": "datlechin/flarum-add-like-controls",
+    "description": "Add Like option to Discussion Controls",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "Ngo Quoc Dat",
+            "email": "datlechin@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/https://github.com/datlechin/flarum-add-like-controls/issues",
+        "source": "https://github.com/https://github.com/datlechin/flarum-add-like-controls",
+        "forum": "https://discuss.flarum.org/d/{id}"
+    },
+    "homepage": "https://vieit.net",
+    "funding": [
+        {
+            "type": "website",
+            "url": "https://nhantien.momo.vn/0372124043"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Datlechin\\AddLikeControls\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Add Like Controls",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-thumbs-up",
+                "backgroundColor": "#D3241C",
+                "color": "#fff"
+            }
+        }
+    },
+    "extiverse": {
+        "discuss": "https://discuss.flarum.org/d/{id}"
+    }
+}
