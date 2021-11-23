@@ -3,33 +3,29 @@ import DiscussionControls from 'flarum/forum/utils/DiscussionControls';
 import DiscussionPage from 'flarum/forum/components/DiscussionPage';
 import Button from 'flarum/common/components/Button';
 
-export default function addLikeControls() {
+export default function addIgnoreControls() {
   extend(DiscussionControls, 'userControls', function (items, discussion, context) {
     if (app.session.user && !(context instanceof DiscussionPage)) {
       let currentRoute = app.current.get('routeName');
 
       if (currentRoute === 'index' || currentRoute === 'following') {
-        const post = discussion.firstPost();
+        if (discussion.isHidden()) return;
 
-        if (post.isHidden()) return;
+        const subscription = discussion.subscription();
 
-        const likes = post.likes();
-
-        let isLiked = app.session.user && likes && likes.some((user) => user === app.session.user);
-
-        items.add('like',
+        items.add('ignore',
           Button.component({
-            icon: isLiked ? 'fas fa-thumbs-up' : 'far fa-thumbs-up',
+            icon: subscription === 'ignore' ? 'fas fa-eye' : 'far fa-eye-slash',
             onclick: () => {
-              isLiked = !isLiked;
-
-              post.save({ isLiked });
+              discussion.save({
+                subscription: subscription === 'ignore' ? null : 'ignore',
+              });
             },
           },
           app.translator.trans(
-            isLiked
-              ? 'flarum-likes.forum.post.unlike_link'
-              : 'flarum-likes.forum.post.like_link'
+            subscription === 'ignore'
+              ? 'flarum-subscriptions.forum.discussion_controls.unignore_button'
+              : 'datlechin-flarum-add-like-controls.forum.ignore'
           ))
         );
       }
