@@ -4,7 +4,7 @@
 
 A [Flarum](http://flarum.org) extension.
 
-### Feature:
+### Features:
 - Add **Like/Unlike** option to Discussion Controls
 - Add **Ignore/Unignore** option to Discussion Controls
 - Add **Mark Read/Unread** option to Discussion Controls
