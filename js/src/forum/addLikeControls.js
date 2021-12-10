@@ -11,7 +11,7 @@ export default function addLikeControls() {
       if (currentRoute === 'index' || currentRoute === 'following') {
         const post = discussion.firstPost();
 
-        if (post.isHidden()) return;
+        if (!post || post.isHidden()) return;
 
         const likes = post.likes();
 
