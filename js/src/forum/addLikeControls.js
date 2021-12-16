@@ -13,25 +13,26 @@ export default function addLikeControls() {
 
         if (!post || post.isHidden()) return;
 
-        const likes = post.likes();
+        if ('flarum-likes' in flarum.extensions) {
+          const likes = post.likes();
 
-        let isLiked = app.session.user && likes && likes.some((user) => user === app.session.user);
+          let isLiked = app.session.user && likes && likes.some((user) => user === app.session.user);
 
-        items.add('like',
-          Button.component({
-            icon: isLiked ? 'fas fa-thumbs-up' : 'far fa-thumbs-up',
-            onclick: () => {
-              isLiked = !isLiked;
+          items.add(
+            'like',
+            Button.component(
+              {
+                icon: isLiked ? 'fas fa-thumbs-up' : 'far fa-thumbs-up',
+                onclick: () => {
+                  isLiked = !isLiked;
 
-              post.save({ isLiked });
-            },
-          },
-          app.translator.trans(
-            isLiked
-              ? 'flarum-likes.forum.post.unlike_link'
-              : 'flarum-likes.forum.post.like_link'
-          ))
-        );
+                  post.save([upvoted, downvoted, 'vote']);
+                },
+              },
+              app.translator.trans(isLiked ? 'flarum-likes.forum.post.unlike_link' : 'flarum-likes.forum.post.like_link')
+            )
+          );
+        }
       }
     }
   });
