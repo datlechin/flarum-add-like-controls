@@ -12,22 +12,25 @@ export default function addMarkAsReadControls() {
 
         let isRead = discussion.isRead();
 
-        items.add('markAsRead', Button.component({
-          icon: isRead ? 'fas fa-check-circle' : 'far fa-check-circle',
-          onclick: () => {
-            if (isRead) {
-              discussion.save({ lastReadPostNumber: null, unread: true })
-            } else {
-              discussion.save({ lastReadPostNumber: discussion.lastPostNumber() });
-            }
-          },
-        },
-        app.translator.trans(
-          isRead
-            ? 'datlechin-flarum-add-like-controls.forum.mark_unread'
-            : 'datlechin-flarum-add-like-controls.forum.mark_read'
-        )));
+        items.add(
+          'markAsRead',
+          Button.component(
+            {
+              icon: isRead ? 'fas fa-check-circle' : 'far fa-check-circle',
+              onclick: () => {
+                if (isRead) {
+                  discussion.save({ lastReadPostNumber: null, unread: true });
+                } else {
+                  discussion.save({ lastReadPostNumber: discussion.lastPostNumber() });
+                }
+              },
+            },
+            app.translator.trans(
+              isRead ? 'datlechin-flarum-add-like-controls.forum.mark_unread' : 'datlechin-flarum-add-like-controls.forum.mark_read'
+            )
+          )
+        );
       }
     }
-  })
+  });
 }

@@ -13,20 +13,23 @@ export default function addIgnoreControls() {
 
         const subscription = discussion.subscription();
 
-        items.add('ignore',
-          Button.component({
-            icon: subscription === 'ignore' ? 'fas fa-eye' : 'far fa-eye-slash',
-            onclick: () => {
-              discussion.save({
-                subscription: subscription === 'ignore' ? null : 'ignore',
-              });
+        items.add(
+          'ignore',
+          Button.component(
+            {
+              icon: subscription === 'ignore' ? 'fas fa-eye' : 'far fa-eye-slash',
+              onclick: () => {
+                discussion.save({
+                  subscription: subscription === 'ignore' ? null : 'ignore',
+                });
+              },
             },
-          },
-          app.translator.trans(
-            subscription === 'ignore'
-              ? 'flarum-subscriptions.forum.discussion_controls.unignore_button'
-              : 'datlechin-flarum-add-like-controls.forum.ignore'
-          ))
+            app.translator.trans(
+              subscription === 'ignore'
+                ? 'flarum-subscriptions.forum.discussion_controls.unignore_button'
+                : 'datlechin-flarum-add-like-controls.forum.ignore'
+            )
+          )
         );
       }
     }
