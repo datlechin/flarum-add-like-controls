@@ -9,6 +9,8 @@ A [Flarum](http://flarum.org) extension.
 - Add **Ignore/Unignore** option to Discussion Controls
 - Add **Mark Read/Unread** option to Discussion Controls
 
+![](https://raw.githubusercontent.com/datlechin/static/main/datlechin-flarum-add-like-controls.demo.png)
+
 ## Installation
 
 Install with composer:
