@@ -2,15 +2,13 @@
     "name": "datlechin/flarum-add-like-controls",
     "description": "Add Like and Ignore option to Discussion Controls",
     "keywords": [
-        "flarum"
+        "flarum",
+        "flarum-extension"
     ],
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
         "flarum/core": "^1.0.0"
-    },
-    "require-dev": {
-        "flarum/testing": "^1.0.0"
     },
     "authors": [
         {
@@ -20,17 +18,10 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/https://github.com/datlechin/flarum-add-like-controls/issues",
-        "source": "https://github.com/https://github.com/datlechin/flarum-add-like-controls",
+        "source": "https://github.com/datlechin/flarum-scroll-buttons",
         "forum": "https://discuss.flarum.org/d/29523"
     },
-    "homepage": "https://vieit.net",
-    "funding": [
-        {
-            "type": "website",
-            "url": "https://nhantien.momo.vn/0372124043"
-        }
-    ],
+    "homepage": "https://ngoquocdat.com",
     "autoload": {
         "psr-4": {
             "Datlechin\\AddLikeControls\\": "src/"
