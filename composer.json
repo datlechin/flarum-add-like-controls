@@ -3,7 +3,8 @@
     "description": "Add Like and Ignore option to Discussion Controls",
     "keywords": [
         "flarum",
-        "flarum-extension"
+        "flarum-extension",
+        "discussion controls"
     ],
     "type": "flarum-extension",
     "license": "MIT",
@@ -35,6 +36,23 @@
                 "name": "fas fa-thumbs-up",
                 "backgroundColor": "#D3241C",
                 "color": "#fff"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": false,
+                "forum": true,
+                "js": true,
+                "css": false,
+                "jsCommon": false,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": true
             }
         }
     },
