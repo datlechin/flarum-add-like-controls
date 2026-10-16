@@ -1,62 +1,62 @@
 {
-    "name": "datlechin/flarum-add-like-controls",
-    "description": "Add Like and Ignore option to Discussion Controls",
-    "keywords": [
-        "flarum",
-        "flarum-extension",
-        "discussion controls"
-    ],
-    "type": "flarum-extension",
-    "license": "MIT",
-    "require": {
-        "flarum/core": "^1.0.0"
-    },
-    "authors": [
-        {
-            "name": "Ngo Quoc Dat",
-            "email": "datlechin@gmail.com",
-            "role": "Developer"
-        }
-    ],
-    "support": {
-        "source": "https://github.com/datlechin/flarum-add-like-controls",
-        "forum": "https://discuss.flarum.org/d/29523"
-    },
-    "homepage": "https://ngoquocdat.com",
-    "autoload": {
-        "psr-4": {
-            "Datlechin\\AddLikeControls\\": "src/"
-        }
-    },
-    "extra": {
-        "flarum-extension": {
-            "title": "Add Like Controls",
-            "category": "feature",
-            "icon": {
-                "name": "fas fa-thumbs-up",
-                "backgroundColor": "#D3241C",
-                "color": "#fff"
-            }
-        },
-        "flarum-cli": {
-            "modules": {
-                "admin": false,
-                "forum": true,
-                "js": true,
-                "css": false,
-                "jsCommon": false,
-                "gitConf": true,
-                "githubActions": true,
-                "prettier": true,
-                "typescript": false,
-                "bundlewatch": false,
-                "backendTesting": false,
-                "editorConfig": true,
-                "styleci": true
-            }
-        }
-    },
-    "extiverse": {
-        "discuss": "https://discuss.flarum.org/d/29523"
+  "name": "datlechin/flarum-add-like-controls",
+  "description": "Add Like and Ignore option to Discussion Controls",
+  "keywords": [
+    "flarum",
+    "flarum-extension",
+    "discussion controls"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "1.8.20"
+  },
+  "authors": [
+    {
+      "name": "Ngo Quoc Dat",
+      "email": "datlechin@gmail.com",
+      "role": "Developer"
     }
+  ],
+  "support": {
+    "source": "https://github.com/datlechin/flarum-add-like-controls",
+    "forum": "https://discuss.flarum.org/d/29523"
+  },
+  "homepage": "https://ngoquocdat.com",
+  "autoload": {
+    "psr-4": {
+      "Datlechin\\AddLikeControls\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "Add Like Controls",
+      "category": "feature",
+      "icon": {
+        "name": "fas fa-thumbs-up",
+        "backgroundColor": "#D3241C",
+        "color": "#fff"
+      }
+    },
+    "flarum-cli": {
+      "modules": {
+        "admin": false,
+        "forum": true,
+        "js": true,
+        "css": false,
+        "jsCommon": false,
+        "gitConf": true,
+        "githubActions": true,
+        "prettier": true,
+        "typescript": false,
+        "bundlewatch": false,
+        "backendTesting": false,
+        "editorConfig": true,
+        "styleci": true
+      }
+    }
+  },
+  "extiverse": {
+    "discuss": "https://discuss.flarum.org/d/29523"
+  }
 }
